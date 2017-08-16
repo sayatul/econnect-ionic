@@ -1,0 +1,27 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+        <ion-title>Order</ion-title>
+
+        <ion-buttons end>
+            <button ion-button icon-only>
+        <ion-icon name="search"></ion-icon>
+      </button>
+        </ion-buttons>
+
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding> 
+    <ion-list>
+        <ion-item (click)="productList()">
+            Place Order
+        </ion-item>
+        <ion-item (click)="viewOrder()">
+            View Order
+        </ion-item>
+    </ion-list>
+</ion-content>

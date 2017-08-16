@@ -1,0 +1,50 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+        <ion-title>Link Bank</ion-title>
+
+        <ion-buttons end>
+            <button ion-button icon-only>
+        <ion-badge item-end><i class="fa fa-search fa-2x" aria-hidden="true"></i></ion-badge>
+      </button>
+        </ion-buttons>
+
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <!-- <ion-item>
+        <ion-avatar item-start>
+            <img src="assets/images/icons/wallet.ico">
+        </ion-avatar>
+        Wallet Balance
+        <ion-badge item-end><i class="fa fa-inr" aria-hidden="true"></i> 260</ion-badge>
+    </ion-item> -->
+<ion-list>
+    <h2 style="text-align: center;"><br>Link Your Bank to Redeem Coupon</h2>
+    <form #bankForm="ngForm" (ngSubmit)="submitForm(bankForm)">
+    <ion-item>
+        <ion-icon name="contact" item-start></ion-icon>
+          <ion-input type="text" name="acc" ngModel required placeholder="Account No."></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="contact" item-start></ion-icon>
+          <ion-input type="text" name="ifsc" ngModel required placeholder="IFSC Code"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="contact" item-start></ion-icon>
+          <ion-input type="text" name="bank" ngModel required placeholder="Bank Name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="contact" item-start></ion-icon>
+          <ion-input type="text" name="branch" ngModel required placeholder="Branch Name"></ion-input>
+      </ion-item>
+    
+    <button ion-button block type="submit" [disabled]="!bankForm.valid" ion-button round>Redeem To Bank</button>
+    </form>
+</ion-list>
+
+</ion-content>

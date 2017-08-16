@@ -1,0 +1,53 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+
+        <ion-title>Wallet</ion-title>
+
+        <ion-buttons end>
+            <button ion-button icon-only>
+                <ion-badge item-end><i class="fa fa-inr fa-2x" aria-hidden="true">{{bal}}</i></ion-badge>
+            </button>
+        </ion-buttons>
+
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <!-- <ion-item>
+        <ion-avatar item-start>
+            <img src="assets/images/icons/wallet.ico">
+        </ion-avatar>
+        Wallet Balance
+        <ion-badge item-end><i class="fa fa-inr" aria-hidden="true"></i> 260</ion-badge>
+    </ion-item> -->
+    <ion-list>
+        <h2 style="text-align: center;"><br>Redeem Coupon</h2>
+        <form #couponForm="ngForm" (ngSubmit)="submitForm(couponForm)">
+            <ion-item>
+                <ion-label fixed><i class="fa fa-mobile fa-2x" aria-hidden="true"></i>&nbsp; Mobile</ion-label>
+                <ion-input type="text" ngModel name="mobile" placeholder="enter here" required></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label fixed><i class="fa fa-qrcode fa-2x" aria-hidden="true"></i>&nbsp; Code</ion-label>
+                <ion-input type="text" ngModel name="code" placeholder="enter here" value="{{scanText}}"
+                           required></ion-input>
+            </ion-item>
+            <ion-row>
+                <ion-col col-3>
+                    <ion-avatar item-end (click)="scan()">
+                        <img src="assets/images/qr.png">
+                    </ion-avatar>
+                </ion-col>
+                <ion-col col-6>
+                    <button type="submit" [disabled]="!couponForm.valid" ion-button round>Redeem</button>
+                </ion-col>
+                <ion-col col-3></ion-col>
+            </ion-row>
+        </form>
+
+    </ion-list>
+
+</ion-content>

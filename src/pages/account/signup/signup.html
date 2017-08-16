@@ -1,0 +1,53 @@
+<ion-content padding>
+    <img src="assets/images/logo.png" class="logo">
+
+    <div padding>
+    <form #signupForm="ngForm" (ngSubmit)="submitForm(signupForm)">
+    <ion-list>
+      <ion-item>
+        <ion-icon name="contact" item-start></ion-icon>
+          <ion-input type="text" name="name" ngModel required placeholder="Enter Name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="phone-portrait" item-start></ion-icon>
+          <ion-input type="number" name="mobile" ngModel required placeholder="Enter Mobile"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="cart" item-start></ion-icon>
+          <ion-input type="text" name="shop" ngModel required placeholder="Enter Shop"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="home" item-start></ion-icon>
+          <ion-input type="text" name="address" ngModel required placeholder="Enter Address"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-icon item-start></ion-icon>
+        <ion-input type="text" name="city" ngModel required placeholder="Enter City"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-icon item-start></ion-icon>
+        <ion-input type="text" name="state" ngModel required placeholder="Enter State"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-icon item-start></ion-icon>
+        <ion-input type="text" name="pincode" ngModel required placeholder="Enter PinCode"></ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-icon name="settings" item-start></ion-icon>
+          <ion-input type="password" name="pwd" ngModel required placeholder="Enter Password"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-icon item-start></ion-icon>
+        <ion-input type="password" name="cpwd" ngModel required placeholder="Confirm Password"></ion-input>
+      </ion-item>
+      <ion-item>
+        <button type="submit" block [disabled]="!signupForm.valid" ion-button round><i class="fa fa-sign-up" aria-hidden="true"></i>&nbsp;&nbsp;Register</button>   
+      </ion-item>
+    </ion-list>
+    </form>
+    <p text-center style="font-family: open-sans;">Have an account?</p>
+    <button block ion-button round outline navPop>SignIn</button>
+    </div>
+
+</ion-content>

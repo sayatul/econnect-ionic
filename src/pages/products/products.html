@@ -1,0 +1,34 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+        <ion-title>Product List</ion-title>
+
+        <ion-buttons end  (click)="gotoCart()">
+            <button ion-button icon-only>
+        <ion-icon name="cart"></ion-icon>
+      </button>
+        </ion-buttons>
+
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding> 
+<ion-list>
+  <ion-item *ngFor="let item of productList">
+    <h2>{{item.product}}</h2>
+    <h3>Pack Size: {{item.size_passive}}</h3>
+    <p>MRP: {{item.mrp}}</p>
+    <input type="number" [(ngModel)]="qty" placeholder="Enter Qty.">
+    
+    <ion-buttons end (click)="addItem(item, qty)">
+      <button ion-button icon-only>
+        <ion-icon name="add-circle"></ion-icon>
+      </button>
+    </ion-buttons>
+
+  </ion-item>
+</ion-list>
+</ion-content>

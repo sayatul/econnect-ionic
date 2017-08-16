@@ -1,0 +1,27 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+        <ion-title>Order Item List</ion-title>
+
+        <ion-buttons end>
+            <button ion-button icon-only>
+        <ion-icon name="search"></ion-icon>
+      </button>
+        </ion-buttons>
+
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding> 
+<ion-list>
+  <ion-item *ngFor="let item of itemList">
+    <h2>{{item.product}}</h2>
+    <p>{{item.size_passive}} | {{item.mrp}}</p>
+  </ion-item>
+
+<button ion-button block (click)="goBack()">Go Back</button>
+</ion-list>
+</ion-content>

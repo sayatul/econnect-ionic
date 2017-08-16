@@ -1,0 +1,31 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+        <ion-title>Wallet</ion-title>
+
+        <ion-buttons end>
+            <button ion-button icon-only>
+        <ion-badge item-end><i class="fa fa-inr fa-2x" aria-hidden="true">{{bal}}</i></ion-badge>
+      </button>
+        </ion-buttons>
+
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+<div padding>
+<ion-list>
+<h3 text-center style="color:#427feb;">Transaction History</h3>
+  <ion-item *ngFor="let item of walletTxn">
+    <h2 color="secondary">Tnx. Id: {{item.tnx_id}}</h2>
+    <p>Code Amount: <strong style="color:rgba(222, 91, 91, 0.82);">{{item.code_amount}}</strong>&ensp; | &ensp;Code: <strong style="color:#6d76ec;">{{item.coupon}}</strong></p>
+    <p>Tnx. Type: <strong style="color:#6d76ec;">{{item.transition_type}}</strong>&ensp; | &ensp;Date: <strong style="color:#6d76ec;">{{item.date}}</strong></p>
+  </ion-item>
+</ion-list>
+
+
+</div>
+</ion-content>

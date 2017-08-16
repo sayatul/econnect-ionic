@@ -1,0 +1,28 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+        <ion-title>Your Orders</ion-title>
+
+        <ion-buttons end>
+            <button ion-button icon-only>
+        <ion-icon name="search"></ion-icon>
+      </button>
+        </ion-buttons>
+
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding> 
+<ion-list>
+  <ion-item *ngFor="let item of orderList">
+    <h2>Status: {{item.approved}}</h2>
+    <h3>Date: {{item.created}}</h3>
+    <p>Total Items: {{item.cart.total_quantity}}</p>
+    <p>Total MRP: {{item.cart.total}}</p>
+    <ion-icon name="arrow-dropright-circle" item-end (click)="cartItems(item.cart)"></ion-icon>
+  </ion-item>
+</ion-list>
+</ion-content>

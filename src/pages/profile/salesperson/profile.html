@@ -1,0 +1,41 @@
+<ion-header (onload)="loadPage()">
+    <ion-toolbar color="primary">
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+        <ion-title>Profile</ion-title>
+
+        <ion-buttons end>
+            <button ion-button icon-only>
+        <ion-icon name="search"></ion-icon>
+      </button>
+        </ion-buttons>
+
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <img src="assets/images/user.jpg">
+    <ion-list padding>
+    <h3 text-center>{{userData.full_name}}</h3>
+    <p text-center>{{profileData.firm_name}}</p>
+        <ion-list>
+            <ion-item>
+                <ion-avatar item-start>
+                    <img src="assets/images/mobile.png">
+                </ion-avatar>
+                <h3 text-center>{{userData.username}}</h3>
+            </ion-item>
+            <ion-item>
+                <ion-avatar item-start>
+                    <img src="assets/images/address.png">
+                </ion-avatar>
+                <h3 text-center>{{profileData.address}}</h3>
+                <h3 text-center>{{profileData.city}}, {{profileData.state}}</h3>
+                <h3 text-center>{{profileData.pin_code}}</h3>
+            </ion-item>
+        </ion-list>
+    </ion-list>
+
+</ion-content>
