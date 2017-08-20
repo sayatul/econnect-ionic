@@ -1,6 +1,1 @@
-
-1) key-alias is same as key name
-2) This is guide for publishing app
-   http://ionicframework.com/docs/v1/guide/publishing.html
-   ionic cordova build --release android
-   jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore key.jks HelloWorld-release-unsigned.apk alias_name
+# Develop [![Build Status](https://travis-ci.org/sayatul/econnect-ionic.svg?branch=develop)]
