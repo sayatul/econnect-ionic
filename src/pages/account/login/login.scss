@@ -1,43 +1,39 @@
 page-login {
-    .bg-image {
-        background-image: url(../assets/images/bg.jpg);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size:     cover; 
-        width: 100%;
-    }
-    .no-scroll .scroll-content {
-        overflow: hidden;
-    }
-    .list {
-        margin: auto;
-        width: 50%;
-        position: absolute;
-        right: 100px;
-        margin-bottom: 30vh;
-    }
-    .label {
-        background-color: rgba(255, 255, 255, 0.0);
-    }
+  .bg-image {
+    background-image: url(../assets/images/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+  }
+  .no-scroll .scroll-content {
+    overflow: hidden;
+  }
 
-    .login{
-        color:#000000;
-    }
+  .label {
+    background-color: rgba(255, 255, 255, 0.0);
+  }
 
-    .logo {
-        margin-top: 2vh;
-        margin: auto;
-        display: block;
-        width: 50%;
-    }
-    .footer-img {
-        display: block;
-        margin: auto;
-        width: 100%;
-    }
+  .login {
+    color: #000000;
+  }
 
-    .text{
-        text-align : center;
-        font-size: 12px;
-    }
+  .logo {
+    margin-top: 2vh;
+    margin: auto;
+    height: auto;
+    display: block;
+    width: 50%;
+  }
+  .footer-img {
+    display: block;
+    margin: auto;
+    width: 100%;
+    //margin-top: 90%;
+  }
+
+  .text {
+    text-align: center;
+    font-size: 12px;
+  }
 }
