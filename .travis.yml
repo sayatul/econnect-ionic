@@ -5,6 +5,9 @@ node_js:
   - "6.4.0"
 
 addons:
+  artifacts:
+    paths:
+    - /home/travis/build/sayatul/econnect-ionic/platforms/android/build/outputs/apk/android-release-unsigned.apk
   apt:
     sources:
     - ubuntu-toolchain-r-test
@@ -13,6 +16,7 @@ addons:
     - openjdk-7-jdk
     - lib32stdc++6
     - lib32z1
+  
 env:
   CXX=g++-4.8
 
@@ -38,8 +42,3 @@ before_script:
 
 script:
   - ionic cordova build --release android
-
-addons:
-  artifacts:
-    paths:
-    - /home/travis/build/sayatul/econnect-ionic/platforms/android/build/outputs/apk/android-release-unsigned.apk
