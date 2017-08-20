@@ -39,3 +39,7 @@ before_script:
 script:
   - ionic cordova build --release android
 
+addons:
+  artifacts:
+    paths:
+    - /home/travis/build/sayatul/econnect-ionic/platforms/android/build/outputs/apk/android-release-unsigned.apk
