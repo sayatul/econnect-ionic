@@ -13,9 +13,6 @@ addons:
     - openjdk-7-jdk
     - lib32stdc++6
     - lib32z1
-  artifacts:
-    paths:
-    - /home/travis/build/sayatul/econnect-ionic/platforms/android/build/outputs/apk/android-release-unsigned.apk
 
 env:
   CXX=g++-4.8
